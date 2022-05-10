@@ -1,5 +1,13 @@
 import './style.css'
 
+const question = document.querySelector('.question') as HTMLElement
+const lBtn = document.querySelector('.lBtn') as HTMLElement
+const rBtn = document.querySelector('.rBtn') as HTMLElement
+const start = document.querySelector('.start') as HTMLElement
+const gametagCon = document.querySelector('.gametagCon') as HTMLElement
+const gameTag = document.querySelector('.gameTag') as HTMLInputElement|null
+
+
 
 
 // interface user{
