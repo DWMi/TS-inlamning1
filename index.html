@@ -3,23 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <script defer type="module" src="/src/main.ts"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Try not get robbed</title>
+    <title>Try not to get robbed</title>
   </head>
   <body>
-    <div class="container">
-      <div class="textCon">
-        <h1 class="question"></h1>
-        <div class="start">Whats your name ?</div>
+    <div class="container center">
+      <div class="imgCon flex center">
+
+        <img class="image none" src="" alt="">
       </div>
-      <div class="gametagCon">
-        <input class="gameTag" type="text"><button class="submit">Submit</button>
+      <div class="textCon column flex center">
+        <h1 class="question none center"></h1>
+        <p class="feedback none center"></p>
+        <div class="start center">
+          <h1 class=" flex center" >Starta spelet!</h1>
+        </div>
+      
       </div>
-      <div class="btnCon">
-        <button class="lBtn"></button>
-        <button class="rBtn"></button>
+      <div class="gametagCon none flex center">
+        <input class="gameTag flex center " type="text" placeholder="name">
+        <input class="feedbackInput none flex center " type="text" placeholder="feedback">
+        <button class="submit center none ">Submit</button>
+        
       </div>
+       <div class="btnCon flex center none">
+          <button class="lBtn flex center"></button>
+          <button class="rBtn flex center"></button>
+        </div>
     </div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
