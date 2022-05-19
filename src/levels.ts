@@ -137,7 +137,7 @@ export let gameLevels: gameInterface[] = [
         id:12,
         question:'Du blir rånad och huggen R.I.P🪦',
         choices:{
-            leftBtn:{btnText:'Spela igen',pathID:1},
+            leftBtn:{btnText:'Gå vidare',pathID:17},
         },
         input:false,
         img:{image: './src/assets/rip.jpg', description:'a gravestone'
@@ -160,7 +160,7 @@ export let gameLevels: gameInterface[] = [
         id:14,
         question:'Du bestämmer att vända tillbaka och träffar på honom du sprang iväg från.. du blir huggen och rånad. R.I.P 🪦',
         choices:{
-            leftBtn:{btnText:'Spela igen?', pathID:1},
+            leftBtn:{btnText:'Gå vidare', pathID:17},
         },
         input:false,
         img:{image: './src/assets/rip.jpg', description:'a gravestone'

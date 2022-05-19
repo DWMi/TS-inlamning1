@@ -18,21 +18,32 @@ const feedbackInput= document.querySelector('.feedbackInput') as HTMLInputElemen
 export const image = document.querySelector('.image') as HTMLImageElement
 
 export let currentLevel = gameLevels[0]
-export const nextLevel: (id: number) => void = (id) => {
 
-    for (let i = 0; i < gameLevels.length; i++) { 
+// const nextLevel: (id: number) => void = (id) => {
 
-        let levels = gameLevels[i]
+//     for (let i = 0; i < gameLevels.length; i++) { 
 
-        if(levels.id == id) {
-            currentLevel = levels
-            renderGameQuestions(levels)
-            bildRend(levels)
+//         let levels = gameLevels[i]
+
+//         if(levels.id == id) {
+//             currentLevel = levels
+//             renderGameQuestions(levels)
+//             bildRend(levels)
             
-        }
-    }
-}
+//         }
+//     }
+// }
 
+const nextLevel: (id: number) => void = (id) => {
+    
+        gameLevels.map((levels)=>{
+            if(levels.id == id){
+                currentLevel = levels
+                renderGameQuestions(levels)
+                bildRend(levels)
+            }
+        })
+}
 
 
 let gamingTag : string;
@@ -45,7 +56,6 @@ export const renderGameQuestions: (GameLevel: gameInterface) => void = (GameLeve
 
     if(currentLevel.choices.leftBtn) {
         lBtn.textContent = GameLevel.choices.leftBtn!.btnText
-    
     }
     
     if(!currentLevel.choices.rightBtn) {
@@ -62,6 +72,8 @@ export const renderGameQuestions: (GameLevel: gameInterface) => void = (GameLeve
         submit?.removeAttribute('disabled')
         gametagCon.className = 'gametagCon flex center'
         submit.addEventListener('click',()=>{
+            submit.style.color = 'black'
+            submit.style.borderColor='black'
             gamingTag = gameTag!.value
             submit?.setAttribute('disabled', '')
             return gamingTag
@@ -80,19 +92,21 @@ export const renderGameQuestions: (GameLevel: gameInterface) => void = (GameLeve
 
 
     if(GameLevel.inputFeedBack){
-        console.log(feedbackInput);
+        submit.style.color = 'white'
+        submit.style.borderColor='white'
         submit?.removeAttribute('disabled')
         gametagCon.classList.remove(GameLevel.classes!)
         feedbackInput.classList.remove(GameLevel.classes!)
         gameTag.classList.add(GameLevel.classes!)
         submit.addEventListener('click', () => {
+            submit.style.color = 'black'
+            submit.style.borderColor='black'
             feedbackText = feedbackInput!.value
             submit?.setAttribute('disabled', '')
         })
     }
 
     if(GameLevel.displayFeedback){
-        console.log('Tack för att ditt feedback ');
         gametagCon?.classList.add(GameLevel.classes!)
         feedback?.classList.remove(GameLevel.classes!)
         feedback.textContent = feedbackText 

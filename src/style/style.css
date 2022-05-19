@@ -6,6 +6,11 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+*{
+  
+  margin:0;
+  box-sizing: border-box;
+}
 
 .h1{
 
@@ -22,14 +27,30 @@
   justify-content: center;
   align-items: center;
 }
-.lBtn, .rBtn{
+.lBtn, .rBtn, .submit{
   cursor:pointer;
   text-align: center;
-  
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  font-weight:bold;
+  border:5px solid white;
+  word-wrap: break-word;
+}
+
+.gameTag, .feedbackInput{
+
+  background-color: rgba(0, 0, 0, 0.438);
+  font-size: 30px;
+  margin: 20px;
+  color: white;
+  border:6px white solid;
 }
 .btnCon{
   position: relative;
-  gap:20px;  
+  margin: 20px;
+  gap:30px;  
 }
 .start{
   border: 1px solid black;
@@ -48,7 +69,8 @@
 }
 .textCon{
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
+  margin: 20px;
 }
 .gametagCon{
   flex-direction: column ;
