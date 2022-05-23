@@ -1,9 +1,9 @@
 # TS-inlamning1
-Spel
+Try not to get robbed 
 
 Uppgiftbeskrivning:
 
-Du bygga ett textbaserat storyspel där spelaren färdas på stigar i din story. För varje punkt i din story skall en text och/eller bild presenteras för spelaren och denne ska få ett, två eller tre val. Valen tar spelaren vidare (eller tillbaka) på en väg i storyn.Börja med att bestämma vad spelet skall handla om och planera sedan gärna ett grovt upplägg av spelet innan du börjar programmera. Alla spel skall ha ett namn och en början, när spelet tar slut skall man få valet att börja om.
+Du ska bygga ett textbaserat storyspel där spelaren färdas på stigar i din story. För varje punkt i din story skall en text och/eller bild presenteras för spelaren och denne ska få ett, två eller tre val. Valen tar spelaren vidare (eller tillbaka) på en väg i storyn.Börja med att bestämma vad spelet skall handla om och planera sedan gärna ett grovt upplägg av spelet innan du börjar programmera. Alla spel skall ha ett namn och en början, när spelet tar slut skall man få valet att börja om.
 
 Krav för godkänt: 1.Git & GitHub har använts✅
 2.Projektmappen innehåller en README.md fil - (läs ovan för mer info)✅
@@ -22,5 +22,14 @@ Krav för väl godkänt: 1.Alla punkter ovan (G-krav) är uppfyllda✅
 5.Det skall finnas minst 2 vägskäl där användaren skall mata in text som svar på frågan.✅
 6.Minst 2 frågor skall ha en bild i sin beskrivning.✅
 7.Spelet skall ha mer än ett potentiellt slut.✅
+
+
+Hur projektet byggs / körs:
+
+Jag byggde spelet först genom att skapa alla frågor samt interfacen, sedan byggde funktionaliteterna i typescript. 
+Sedan optimerade jag bilderna så de laddas snabbt, samt lite styling.
+
+Man kör projektet genom att antingen importera den manuellt eller klona den sedan öppnar manuelen och kör npm install om man redan har installerat node. Sedan väljer man vanilla typscript. Sist så kör man npm run dev för att få "live server".
+
 
 https://github.com/DWMi/TS-inlamning1
