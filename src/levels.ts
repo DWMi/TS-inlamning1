@@ -9,7 +9,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn: {btnText:'Gå hem',pathID:2},
             rightBtn:{btnText:'Taxi',pathID:3}
         },
-        input:false,
         img:{image: './src/assets/drunkwalk.jpg', description:'drunk man walking'
         },
         classesDefault:'none'
@@ -21,7 +20,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'Börja om',pathID: 1}
         },
-        input:false,
         img:{image: './src/assets/robbery.png', description:'man getting robbed'
         },
         classesDefault:'none'
@@ -33,7 +31,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Ta en annan', pathID:5},
             rightBtn:{btnText:'Ta en svarttaxi istället', pathID:4}
         },
-        input:false,
         img:{image: './src/assets/taxi.png', description:'weird taxi'
         },
         classesDefault:'none'
@@ -45,7 +42,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Börja om från sist', pathID:3},
             rightBtn:{btnText:'Börja om från början', pathID:1}
         },
-        input:false,
         img:{image: './src/assets/robbery.png', description:'man getting robbed'
         },
         classesDefault:'none'
@@ -57,7 +53,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Du tar den ändå trots stelheten',pathID:7},
             rightBtn:{btnText:'Du går hem', pathID:6}
         },
-        input:false,
         img:{image: './src/assets/taxi.png', description:'weird taxi'
         },
         classesDefault:'none'
@@ -69,7 +64,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'En chans till', pathID:5}
         },
-        input:false,
         img:{image: './src/assets/robbery.png', description:'man getting robbed'
         },
         classesDefault:'none'
@@ -81,7 +75,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Ge grannens address.',pathID:9},
             rightBtn:{btnText:'Ge ditt address',pathID:8}
         },
-        input:false,
         img:{image: './src/assets/taxi.png', description:'weird taxi'
         },
         classesDefault:'none'
@@ -92,7 +85,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'börja om från sist',pathID:7}
         },
-        input:false,
         img:{image: './src/assets/robbery.png', description:'man getting robbed'
         },
         classesDefault:'none'
@@ -104,7 +96,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Du tar en springnota', pathID: 10},
             rightBtn:{btnText:'Du betalar honom',pathID: 11}
         },
-        input:false,
         img:{image: './src/assets/dollars.jpg', description:'tons of cash'
         },
         classesDefault:'none'
@@ -116,7 +107,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Börja om från början', pathID:1},
 
         },
-        input:false,
         img:{image: './src/assets/broke.jpg', description:'an empty wallet'
         },
         classesDefault:'none'
@@ -128,7 +118,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Du börjar springa ifrån honom',pathID:13},
             rightBtn:{btnText:'Du struntar i honom och börjar promenera',pathID:12}
         },
-        input:false,
         img:{image: './src/assets/susman.jpg', description:'a suspicious man'
         },
         classesDefault:'none'
@@ -139,7 +128,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'Gå vidare',pathID:17},
         },
-        input:false,
         img:{image: './src/assets/rip.jpg', description:'a gravestone'
         },
         classesDefault:'none'
@@ -151,7 +139,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Gå tillbaka?',pathID:14},
             rightBtn:{btnText:'Fortsätt frammåt',pathID:15}
         },
-        input:false,
         img:{image: './src/assets/run.gif', description:'forrest gump'
         },
         classesDefault:'none'
@@ -162,7 +149,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'Gå vidare', pathID:17},
         },
-        input:false,
         img:{image: './src/assets/rip.jpg', description:'a gravestone'
         },
         classesDefault:'none'
@@ -174,7 +160,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Du ger upp och sover i en buske',pathID: 16},
             rightBtn:{btnText:'Du ringer taxi',pathID:3}
         },
-        input:false,
         img:{image: './src/assets/lost.gif', description:'lost man'
         },
         classesDefault:'none'
@@ -185,7 +170,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText: 'Gå vidare',pathID:17},
         },
-        input:false,
         img:{image: './src/assets/home.gif', description:'jim carrey'
         },
         classesDefault:'none'
@@ -195,8 +179,7 @@ export let gameLevels: gameInterface[] = [
         question:'Vad heter du?',
         choices:{
             leftBtn:{btnText:'Gå vidare', pathID:18},
-        },
-        input:true,
+        },      
         inputName:true,
         classes: 'none',
         classesDefault: 'gametagCon none flex center'
@@ -208,7 +191,6 @@ export let gameLevels: gameInterface[] = [
             leftBtn:{btnText:'Ja',pathID:19},
             rightBtn:{btnText:'Nej',pathID:20}
         },
-        input:false,
         classes:'none',
         classesDefault: 'gametagCon none flex center'
 
@@ -219,7 +201,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'Gå vidare', pathID:21},
         }, 
-        input:false,
         classes:'none',
         displayName:true,
         classesDefault: 'gametagCon none flex center'   
@@ -230,16 +211,16 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'Gå vidare', pathID:21},
         },
-        input:false,
-        displayName:true
+        displayName:true,
+        classes:'none',
+        classesDefault: 'gametagCon none flex center'   
     },
     {
         id:21,
         question:'Vad tyckte du om spelet?',
         choices:{
             leftBtn:{btnText:'Gå vidare', pathID:22},
-        },
-        input:true,
+        },       
         inputFeedBack:true,
         classes: 'none',
         classesDefault: 'gametagCon none flex center'
@@ -251,7 +232,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'Gå vidare',pathID:23},
         },
-        input:false,
         displayName:true,
         displayFeedback:true,
         classes:'none',
@@ -265,7 +245,6 @@ export let gameLevels: gameInterface[] = [
         choices:{
             leftBtn:{btnText:'Ja'}
         },
-        input:false,
         classes:'none',
         end:true,
         classesDefault: 'gametagCon none flex center'

@@ -2,9 +2,6 @@ import { gameInterface } from './interface'
 import { gameLevels } from './levels'
 
 
-
-
-
 export const question = document.querySelector('.question') as HTMLTitleElement
 const lBtn = document.querySelector('.lBtn') as HTMLButtonElement
 const rBtn = document.querySelector('.rBtn') as HTMLButtonElement
@@ -16,23 +13,9 @@ export const submit = document.querySelector('.submit') as HTMLButtonElement
 const feedback = document.querySelector('.feedback') as HTMLParagraphElement
 const feedbackInput= document.querySelector('.feedbackInput') as HTMLInputElement
 export const image = document.querySelector('.image') as HTMLImageElement
+const blurryTime = document.querySelector('.blurryTime') as HTMLDivElement
 
-export let currentLevel = gameLevels[0]
-
-// const nextLevel: (id: number) => void = (id) => {
-
-//     for (let i = 0; i < gameLevels.length; i++) { 
-
-//         let levels = gameLevels[i]
-
-//         if(levels.id == id) {
-//             currentLevel = levels
-//             renderGameQuestions(levels)
-//             bildRend(levels)
-            
-//         }
-//     }
-// }
+let currentLevel = gameLevels[0]
 
 const nextLevel: (id: number) => void = (id) => {
     
@@ -49,7 +32,7 @@ const nextLevel: (id: number) => void = (id) => {
 let gamingTag : string;
 let feedbackText : string;
 export const renderGameQuestions: (GameLevel: gameInterface) => void = (GameLevel) =>{
-  
+    
     if(currentLevel.choices.rightBtn) {
         rBtn.textContent = GameLevel.choices.rightBtn!.btnText
     }
@@ -68,12 +51,21 @@ export const renderGameQuestions: (GameLevel: gameInterface) => void = (GameLeve
 
 
     if(GameLevel.inputName){
+        lBtn.classList.add(GameLevel.classes!)
         gameTag.classList.remove(GameLevel.classes!)
-        submit?.removeAttribute('disabled')
         gametagCon.className = 'gametagCon flex center'
+        gameTag.addEventListener('keyup',()=>{
+            if(gameTag.value == ''){
+            submit.classList.add(GameLevel.classes!)
+            }else{
+            submit.classList.remove(GameLevel.classes!)
+            }
+        })
         submit.addEventListener('click',()=>{
             submit.style.color = 'black'
             submit.style.borderColor='black'
+            submit.style.cursor= 'not-allowed'
+            lBtn.classList.remove(GameLevel.classes!)
             gamingTag = gameTag!.value
             submit?.setAttribute('disabled', '')
             return gamingTag
@@ -83,25 +75,33 @@ export const renderGameQuestions: (GameLevel: gameInterface) => void = (GameLeve
     }
 
         if(GameLevel.displayName){
-            if(gamingTag.length>0){
-                question.textContent = GameLevel.question + gamingTag
-            }else {
-            question.textContent = GameLevel.question
-            }
-        }    
+            question.textContent += gamingTag
+        } 
 
 
-    if(GameLevel.inputFeedBack){
+    if(GameLevel.inputFeedBack){ 
+        submit.style.cursor= 'pointer'
+        lBtn.classList.add(GameLevel.classes!)
         submit.style.color = 'white'
         submit.style.borderColor='white'
+        submit.classList.add(GameLevel.classes!)
         submit?.removeAttribute('disabled')
         gametagCon.classList.remove(GameLevel.classes!)
         feedbackInput.classList.remove(GameLevel.classes!)
         gameTag.classList.add(GameLevel.classes!)
+        feedbackInput.addEventListener('keyup',()=>{
+        if(feedbackInput.value == ''){
+            submit.classList.add(GameLevel.classes!)
+        }else{
+            submit.classList.remove(GameLevel.classes!)
+            }  
+        })
         submit.addEventListener('click', () => {
             submit.style.color = 'black'
             submit.style.borderColor='black'
-            feedbackText = feedbackInput!.value
+            submit.style.cursor= 'not-allowed'
+            lBtn.classList.remove(GameLevel.classes!)
+            feedbackText = 'Feedback: ' + feedbackInput!.value
             submit?.setAttribute('disabled', '')
         })
     }
@@ -116,19 +116,19 @@ export const renderGameQuestions: (GameLevel: gameInterface) => void = (GameLeve
     }  
 
     if(GameLevel.end){
-    lBtn.addEventListener('click', ()=>{  
-        location.reload()
-    })
-}
+        lBtn.addEventListener('click', ()=>{  
+            location.reload()
+        })
+    }
 }
 
 
 
 export const bildRend:(GameImage: gameInterface) => void = (GameImage) =>{
     if(GameImage.img){
-        image.classList.remove('none')
         image.src = currentLevel.img!.image
         image.alt = currentLevel.img!.description
+        blurryTime.style.backgroundImage = `url("${currentLevel.img!.image}")`
     }
 }
 

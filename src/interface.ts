@@ -5,11 +5,9 @@ export interface gameInterface {
         leftBtn?: btnData,
         rightBtn?: btnData
     },
-    input:true|false,
     img?:picture,
     classes?:string,
     classesDefault?:string,
-    submit?:boolean,
     inputName?:boolean,
     displayName?:boolean,
     inputFeedBack?:boolean,
@@ -19,7 +17,7 @@ export interface gameInterface {
 
 interface btnData {
         btnText:string,
-        pathID?:number,
+        pathID?:number
 }
 
 interface picture{
