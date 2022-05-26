@@ -1,5 +1,5 @@
 import './style/style.css'
-import {start,question,btnCon, submit, renderGameQuestions, bildRend} from './gameLogic'
+import {start,question,btnCon, renderGameQuestions, bildRend} from './gameLogic'
 import { gameLevels} from './levels'
 
 
